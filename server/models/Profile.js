@@ -57,6 +57,10 @@ const profileSchema = {
       },
     },
   ],
+  score: {
+    type: String,
+    required: false,
+  },
 };
 
 const Profile = mongoose.model("Profile", profileSchema);
