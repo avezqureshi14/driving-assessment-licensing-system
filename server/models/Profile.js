@@ -9,6 +9,10 @@ const profileSchema = {
     type: String,
     required: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
   mobile: {
     type: String,
     required: true,
