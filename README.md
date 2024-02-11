@@ -6,7 +6,7 @@ Welcome to our incredible Driving Assessments and Licensing System! 🌟 Here's 
 Experience the live application here: [Driving Assessments and Licensing System Live](https://avez-blog.netlify.app/)
 
 ## GitHub Repository 💻
-Explore the code and contribute on our GitHub repository: [Driving Assessments and Licensing System GitHub](https://github.com/avezqureshi14/avez-2023-end)
+Explore the code and contribute on our GitHub repository: [Driving Assessments and Licensing System GitHub](https://github.com/avezqureshi14/driving-assessment-licensing-system)
 
 ## Features 🚀
 
