@@ -24,7 +24,7 @@ const questionSchema = {
   category: {
     type: String,
     required: true,
-    enum: ["rules", "practices", "sign"],
+    enum: ["rules", "best_practices", "sign"],
   },
 };
 

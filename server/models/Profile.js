@@ -49,20 +49,16 @@ const profileSchema = {
     type: String,
     required: false,
   },
-  docs: [
-    {
-      identity: {
-        type: String,
-        required: false,
-      },
-      residency: {
-        type: String,
-        required: false,
-      },
-    },
-  ],
-  score: {
+  identity: {
     type: String,
+    required: false,
+  },
+  residency: {
+    type: String,
+    required: false,
+  },
+  score: {
+    type: Number,
     required: false,
   },
 };

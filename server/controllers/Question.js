@@ -15,12 +15,17 @@ const addQuestion = async (req, res) => {
 
 const getQuestions = async (req, res) => {
   try {
-    const allQuestions = await Question.find();
-    res.json(allQuestions);
+    const questions = await Question.find();
+    
+    // Send only the first two questions to the frontend
+    const limitedQuestions = questions.slice(0, 2);
+
+    res.json({ questions: limitedQuestions });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 module.exports = {
     addQuestion,
