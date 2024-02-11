@@ -1,5 +1,5 @@
 import * as api from "../api";
-import { FETCH_ALL } from "../constants/actionTypes";
+import { FETCH_ALL, TEST } from "../constants/actionTypes";
 
 export const getQuestions = () => async (dispatch) => {
   try {
@@ -9,3 +9,4 @@ export const getQuestions = () => async (dispatch) => {
     console.log(error);
   }
 };
+

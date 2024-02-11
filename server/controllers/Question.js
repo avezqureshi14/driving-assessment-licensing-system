@@ -18,9 +18,9 @@ const getQuestions = async (req, res) => {
     const questions = await Question.find();
     
     // Send only the first two questions to the frontend
-    const limitedQuestions = questions.slice(0, 2);
+    const limitedQuestions = questions.slice(0, 10);
 
-    res.json({ questions: limitedQuestions });
+    res.json({ questions });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

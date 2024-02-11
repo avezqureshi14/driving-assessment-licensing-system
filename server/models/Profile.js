@@ -60,6 +60,7 @@ const profileSchema = {
   score: {
     type: Number,
     required: false,
+    default: 0,
   },
 };
 

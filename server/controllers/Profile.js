@@ -5,12 +5,6 @@ const Profile = require("../models/Profile");
 
 const secret = "test";
 
-cloudinary.config({
-  cloud_name: "ddpi99yjr",
-  api_key: "194893786515793",
-  api_secret: "qrHEg7Nb57ONpI6nW5HE_sMzERw",
-});
-
 const signin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -37,7 +31,6 @@ const signin = async (req, res) => {
 
 const register = async (req, res) => {
   const { fullName, email, password, mobile, address } = req.body; // Include the 'category' field
-  console.log(req.body)
   try {
     const oldUser = await Profile.findOne({ email });
 
@@ -66,10 +59,9 @@ const register = async (req, res) => {
 };
 
 const getUserById = async (req, res) => {
-  const { userId } = req.params; // Extract user ID from request parameters
-
+  const { id } = req.params; // Extract user ID from request parameters
   try {
-    const user = await Profile.findById(userId); // Find user by ID
+    const user = await Profile.findById(id); // Find user by ID
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
@@ -97,31 +89,7 @@ const getAllUsers = async (req, res) => {
 const updateProfile = async (req, res) => {
   const { id } = req.params;
   const updateFields = req.body;
-  const photo = req.files.photo;
-  const identity = req.files.identity;
-  const residency = req.files.residency;
-  const files = [photo, identity, residency];
-
   try {
-    const uploadPromises = files.map((file) => {
-      return new Promise((resolve, reject) => {
-        cloudinary.uploader.upload(file.tempFilePath, (err, result) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(result);
-          }
-        });
-      });
-    });
-
-    const results = await Promise.all(uploadPromises);
-
-    // Update updateFields with Cloudinary URLs
-    updateFields.photo = results[0].secure_url;
-    updateFields.identity = results[1].secure_url;
-    updateFields.residency = results[2].secure_url;
-
    
     const updatedProfile = await Profile.findByIdAndUpdate(
       id,
