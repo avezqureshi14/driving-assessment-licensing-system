@@ -3,7 +3,7 @@
 Welcome to our incredible Driving Assessments and Licensing System! 🌟 Here's a quick guide to get you started on the road to becoming a licensed driver.
 
 ## Live Application 🌐
-Experience the live application here: [Driving Assessments and Licensing System Live](https://avez-blog.netlify.app/)
+Experience the live application here: [Driving Assessments and Licensing System Live](https://avez-driving-assessment-licensing-sys.netlify.app/)
 
 ## GitHub Repository 💻
 Explore the code and contribute on our GitHub repository: [Driving Assessments and Licensing System GitHub](https://github.com/avezqureshi14/driving-assessment-licensing-system)
