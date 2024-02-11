@@ -102,7 +102,7 @@ const Home = () => {
     </Paper>
     </div>
     <div style={{height:"100vh"}}  >
-    {/* <Video/> */}
+    <Video/>
     </div>
     </>
   );
